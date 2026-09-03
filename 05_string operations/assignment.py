@@ -1,4 +1,7 @@
 #1.
+from itertools import count
+
+
 your_name = "John Doe"
 your_city = "New York"
 fav_language = 'Python'
@@ -78,7 +81,7 @@ Name = "Abhishek Thakur"
 Age = 25
 City = "New York"
 Programming_language = "Python"
-print("My name is {Name}. I am {Age} years old. I live in {City} and my favorite programming language is {Programming_language}.".format(Name=Name, Age=Age, City=City, Programming_language=Programming_language))
+print(f"My name is {Name}. I am {Age} years old. I live in {City} and my favorite programming language is {Programming_language}.")
 #15.
 name="Abhishek"
 age=20
@@ -107,3 +110,93 @@ j=g.lower()==h.lower()
 print(i)
 print(j)
 #20.
+k="Python is a programming language"
+print("Python" in k)
+print("Java" in k)
+print("programming" in k)
+print("language" in k)
+#21.
+print(k.find("Python"))
+print(k.find("Java"))
+print(k.find("programming"))
+print(k.find("language"))
+#22.
+print(k.index("Python"))
+#print(k.index("Java"))
+print(k.index("programming"))
+print(k.index("language"))
+#23.
+l="banana"
+print(l.count("a"))
+print(l.count("b"))
+print(l.count("n"))
+#25.
+m=filename = "student_notes.pdf"
+print(m.startswith("student"))
+print(m.endswith(".pdf"))
+print(m.endswith(".txt"))
+#26.
+text = "apple apple apple"
+print(text.replace("apple", "mango"))
+#27.
+print(text.replace("apple", "mango",1))
+#28.
+text = "Python"
+text1 = text.upper()
+print(text1)
+print(text)
+#29.
+text = "   Python Programming   "
+print(text.strip())
+print(text.lstrip())
+print(text.rstrip())
+#30.
+name=input("Enter your name: ")
+print(f"my name is {name.strip()}" )
+#31.
+z="Python is easy to learn"
+print(z.split())
+#32.
+y="apple,banana,mango,orange"
+print(y.split(","))
+#33.
+words = ["Python", "is", "easy"]
+print(" ".join(words))
+#34.
+words1 = "Python-is-easy"
+print("/".join(words1.split("-")))
+#35.
+name="Abhishek"
+age=20
+city="New York"
+print(f"My name is {name}. I am {age} years old. I live in {city}.")
+#36.
+a = 10
+b = 20
+print(f"The sum of both is {a + b}.")
+#38.
+name = input("Enter your name: ")
+name1 = name.strip()
+print(f"My name is {name}.")
+print(f"My name is {name1}.")
+print(f"My name is {name.upper()}.")
+print(f"My name is {name.lower()}.")
+print(f"My name is {name.title()}.")
+print(len(name1.strip()))
+print(name1[0])
+print(name1[-1])
+print("Abhishek" in name1)
+#39.
+sen=input("Enter a sentence: ")
+sen1=sen.strip()
+sen11=len(sen1.split())
+print(f"My sentence is {sen1}.")
+print(len(sen1))
+print(sen1[0])
+print(sen1[-1])
+print(sen1.upper())
+print(sen1.lower())
+print(sen1.title())
+print("Python" in sen1)
+print(sen1.find("a"))
+print(sen11)
