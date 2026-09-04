@@ -14,8 +14,8 @@ print(f"your name is {c} and you are {d} years old.")
 e=input("enter any data ")
 print(type(e))
 #6.
-first_name=("Enter your first name")
-last_name=("Enter your last name")
+first_name=input("Enter your first name")
+last_name=input("Enter your last name")
 print(f"{first_name} {last_name}")
 #7.
 name=input("Enter your full name")
@@ -63,8 +63,8 @@ b = 20
 print(f"the sum of both the variables are {a+b}")
 #20.
 name=input("Enter your name: ")
-age int(input("Enter your Age: "))
-print(f"My name is {name} and i am {ag} Years old.")
+age=int(input("Enter your Age: "))
+print(f"My name is {name} and i am {age} Years old.")
 #21.
 x=float(input("Enter the price: "))
 print(f"The price od the product is {x:.2f}")
@@ -101,4 +101,4 @@ name=(input("Enter student's Name: "))
 age=int(input("Enter student's age: "))
 height=float(input("Enter student's height(in cm): "))
 city=input("Enter student's city of residence: ")
-print(f"The name of the Student is {name} and he is {age} years ols and is {height:.2f} cms long and is the resident of {city} city.") 
+print(f"The name of the Student is {name} and he is {age} years old and is {height:.2f} cms long and is the resident of {city} city.") 
