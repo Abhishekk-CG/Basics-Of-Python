@@ -1,7 +1,4 @@
 #1.
-from itertools import count
-
-
 your_name = "John Doe"
 your_city = "New York"
 fav_language = 'Python'
