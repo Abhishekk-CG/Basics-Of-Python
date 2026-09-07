@@ -138,3 +138,72 @@ if a!=0:
         print("Negative")
 else:
     print("Zero")
+#21.
+age=int(input("Enter your Age: "))
+marks=int(input("Enter your Marks: "))
+if age>=18:
+    if marks>=40:
+        print("Eligible")
+else:
+    print("Ineligible")
+#22.
+number=int(input("Enter any number: "))
+if number<10:
+    if number>100:
+        print("Special")
+#23.
+age=int(input("Enter your Age: "))
+identity=bool(input("has_id is: "))
+if age>=18:
+    if identity==True:
+        print("Allowed")
+#24.
+a=int(input("Enter a Number: "))
+b=int(input("Enter any number: "))
+if a>10:
+    if b>10:
+        print("Both the numbers are Greater than 10.")
+#25.
+number=int(input("Enter a Number: "))
+if number<0:
+    if number>100:
+        print("Special Number")
+#26.
+shop=input("Enter Your Shop Name: ")
+status=bool(input("is_closed: "))
+if not(status==True):
+    print("Open")
+else:
+    print("Closed")
+#27.
+x=int(input("Enter any Number: "))
+if 10<x<50:
+    print("Number lies between 10 and 50")
+#28.
+x=int(input("Enter any Number: "))
+if x<10 or x>50:
+    print("the number is outside the range.")
+#29.
+student=bool(input("is_student(True/False): ").capitalize)
+identity=bool(input("has_Id(True/False): ").capitalize)
+ticket=bool(input("has_ticket(True/False): ").capitalize)
+if student==True:
+    if identity==True:
+        if ticket==True:
+            print("Allowed")
+else:
+    print("Not Allowed")
+#30.
+age=int(input("Enter your Age: "))
+marks=int(input("Enter your Marks: "))
+has_id=bool(input("has_id(True/False): ").capitalize)
+if age>=18:
+    if marks>=40:
+        if has_id==True:
+            print("Eliible")
+else:
+    print("Not Eliible")
+    
+
+
+
