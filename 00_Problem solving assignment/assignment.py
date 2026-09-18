@@ -224,18 +224,20 @@
 # #22.
 # balance=int(input("Enter your account balance: "))
 # withdraw_amt=int(input("Enter the withdrawal amount: "))
-# if withdraw_amt<=0 or balance<=0:
-#     print("Enter a valid Amount")
-#     if withdraw_amt%100!=0 and withdraw_amt<0:
-#         print("Enter a valid amount divisible by 100")
 # remaining_balance=(balance-withdraw_amt)
-# if remaining_balance<0:
-#     print("you can't withdraw amount more than your account balance ")
-# if remaining_balance>=500:
-#     print(f"withdrawal successful your account Balance is {remaining_balance}" )
+# if balance<0:
+#     print("Enter a valid balance")
 # else:
-#     print("'You cant withdraw money beacuse your account Balance will be less than Rs.500 " \
-#     "which will lead to the panelty'")
+#     if withdraw_amt>0:
+#         if withdraw_amt%100==0:
+#             if withdraw_amt>balance:
+#                 print("Insufficient amount")
+#             elif remaining_balance>=500:
+#                 print(f"Withdrawal successful, Account balance: {remaining_balance}")
+#         else:
+#             print("enter the valid amount")
+#     else:
+#         print("Enter a valid withdrawal amount")
 # #23.
 # username=input("Enter your Username: ")
 # password=input("Enter your password: ")
@@ -280,9 +282,50 @@
 # else:
 #     print("Enter valid marks")
 # #26.
-# day=int(input("Enter the day": ))
+# date=int(input("Enter the day: " ))
 # month=int(input("Enter the month: "))
 # year=int(input("Enter the year: "))
+# if year>0:
+#     if year%4!=0 or (year%100==0 and not year%4!=0):
+#         if 12>=month>=1:
+#             if month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12 :
+#                 if 31>=date>=1:
+#                     print(f"{date}/{month}/{year} This is a valid date")
+#                 elif date<=0 or date>=32:
+#                     print("please! Enter a valid date")
+#             if month==4 or month==6 or month==9 or month==11:
+#                 if 30>=date>=1:
+#                     print(f"{date}/{month}/{year} This is a valid date")
+#                 elif date<=0 or date>=31:
+#                     print("please! Enter a valid date")
+#             if month==2:
+#                 if 28>=date>=1:
+#                     print(f"{date}/{month}/{year} This is a valid date and is a non leap year")
+#                 else:
+#                     print("The Date is not correct, A non leap year can't have more than 28 days in feb.")
+#         else:
+#             print("Enter a valid month")
+#     elif year%400==0 or (year%4==0 and not year%100==0):
+#         if 12>=month>=1:
+#             if month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12 :
+#                 if 31>=date>=1:
+#                     print(f"{date}/{month}/{year} This is a valid date")
+#                 elif date<=0 or date>=32:
+#                     print("please! Enter a valid date")
+#             if month==4 or month==6 or month==9 or month==11:
+#                 if 30>=date>=1:
+#                     print(f"{date}/{month}/{year} This is a valid date")
+#                 elif date<=0 or date>=31:
+#                     print("please! Enter a valid date")
+#             if month==2:
+#                 if 29>=date>=1:
+#                     print(f"{date}/{month}/{year} This is a valid date and is a leap year.")
+#                 else:
+#                     print("The Date is not correct, A leap year can't have more than 29 days in feb.")
+#         else:
+#             print("Enter a valid month")
+# else:
+#     print("Please! Enter a valid year")
 # #27.
 # Hours=int(input("Enter hours: "))
 # Minutes=int(input("Enter minutes: "))
@@ -305,27 +348,53 @@
 #     print(f"{name2} is youngest.")
 # elif age2>age1 and age3>age1:
 #     print(f"{name1} is youngest.")
-# elif age1==age2 and (age3>age1 or age3>age2):
+# elif age1==age2 and (age3>age1):
 #     print(f"{name1} {name2} have same age and are youngest.")
-# elif age1==age2 and (age3<age1 or age3<age2):
+# elif age1==age2 and (age3<age1):
 #     print(f"{name3} is youngest.")
-# elif age2==age3 and (age1>age3 or age1>age2):
+# elif age2==age3 and (age1>age3):
 #     print(f"{name2} {name3} have same age and are youngest.")
-# elif age1==age2 and (age1<age3 or age1<age2):
+# elif age1==age2 and (age1<age3):
 #     print(f"{name1} is youngest.")
-# elif age1==age3 and (age2>age1 or age2>age3):
+# elif age1==age3 and (age2>age1):
 #     print(f"{name1} {name3} have same age and are youngest.")
-# elif age1==age3 and (age2<age1 or age2<age3):
+# elif age1==age3 and (age2<age1):
 #     print(f"{name3} is youngest.")
 # elif age1==age2==age3:
 #     print("All three are of same age")
-#29.
-num1=int(input("Enter a number: "))
-num2=int(input("Enter a number: "))
-num3=int(input("Enter a number: "))
-if num1>num2>num3 or num3>num2>num1:
-    print(f"{num2} is second largest.")
-elif num2>num1>num3 or num3>num1>num2:
-    print(f"{num1} is second largest.")
-elif num1>num3>num2 or num2>num3>num1:
-    print(f"{num3} is second largest.")
+# #29.
+# num1=int(input("Enter a number: "))
+# num2=int(input("Enter a number: "))
+# num3=int(input("Enter a number: "))
+# if num1>num2>num3 or num3>num2>num1:
+#     print(f"{num2} is second largest.")
+# elif num2>num1>num3 or num3>num1>num2:
+#     print(f"{num1} is second largest.")
+# elif num1>num3>num2 or num2>num3>num1:
+#     print(f"{num3} is second largest.")
+# elif num1==num2 and num3>num1:
+#     print(f"{num1} and {num2} are the second largest number.")
+# elif num1==num2 and num3<num1:
+#     print(f"{num3} is second largest.")
+# elif num2==num3 and num1>num3:
+#     print(f"{num2} and {num3} are the second largest number.")
+# elif num2==num3 and num1<num3:
+#     print(f"{num1} is second largest number.")
+# elif num1==num3 and num2>num1:
+#     print(f"{num1} and {num3} are the second largest number.")
+# elif num1==num3 and num2<num1:
+#     print(f"{num2} is second largest number.")
+# elif num1==num2==num3:
+#     print("All the three numbers are equal")
+# #30.
+# age=int(input("Enter the age: "))
+# Marks=int(input("Enter your marks: "))
+# income=int(input("Enter your family income: "))
+# attendance_percentage=int(input("Enter your percentage of attendance: "))
+# if 25>=age>=18:
+#     if marks>=85:
+#         if attendance_percentage>=75:
+#             if income<=300000:
+#                 print("You are Eligible for getting Scholarship")
+# else:
+#     print("You are ineligible for getting scholarship")
